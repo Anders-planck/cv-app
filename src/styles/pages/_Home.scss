@@ -1,0 +1,76 @@
+.home {
+
+  .homeContent {
+    background: linear-gradient(115deg, $color-1 50%, transparent 100%);
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 500px;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: 'test';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      background: url('https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/69528494_725031901269711_7183141380162584576_o.jpg?_nc_cat=104&_nc_sid=e3f864&_nc_ohc=HZhQN1B1pnUAX92D-h1&_nc_ht=scontent-mxp1-1.xx&oh=12f3a8ea5916ca396d811045a30591a2&oe=5F805A98') no-repeat center/cover;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 4rem;
+        font-family: $font-3;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+      }
+      h2 {
+        font-size: 2.3rem;
+        padding: 1.5rem 0 7rem;
+        color: $color-3;
+        text-shadow: 1px 4px 1px $black;
+      }
+      .pdf {
+          display:block;
+        a {
+          font-size: 1.3rem;
+          background: $color-3;
+          padding: 1rem 2rem;
+          border-radius: $borderRadius;
+          box-shadow: 0 5px 1px rgb(15, 15, 15);
+          transition: 0.2s ease;
+
+          &:hover {
+            background: $color-4;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px){
+  .homeContent {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width:580px){
+  .homeContent {
+    &:after {
+   background: url('https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/69528494_725031901269711_7183141380162584576_o.jpg?_nc_cat=104&_nc_sid=e3f864&_nc_ohc=HZhQN1B1pnUAX92D-h1&_nc_ht=scontent-mxp1-1.xx&oh=12f3a8ea5916ca396d811045a30591a2&oe=5F805A98')  no-repeat 60% 50%/cover !important;
+    }
+    h1 {
+      font-size: 2.3rem !important;
+    }
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+}
